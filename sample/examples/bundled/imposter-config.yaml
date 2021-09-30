@@ -1,0 +1,7 @@
+plugin: rest
+response:
+  scriptFile: mock.js
+
+#resources:
+#  - path: /
+#    method: POST

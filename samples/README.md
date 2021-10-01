@@ -2,8 +2,8 @@
 
 This directory contains the following samples:
 
-- JavaScript: [imposter-sample-javascript](./samples/imposter-sample-javascript)
-- TypeScript: [imposter-sample-typescript](./samples/imposter-sample-typescript)
+- JavaScript: [imposter-sample-javascript](./imposter-sample-javascript)
+- TypeScript: [imposter-sample-typescript](./imposter-sample-typescript)
 
 These samples are preconfigured to transpile and bundle source files down to a single JS file.
 

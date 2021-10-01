@@ -1,1 +1,0 @@
-!function(){"use strict";var t,e=__imposter_types,o=["Ada Lovelace","Alan Turing","Grace Hopper"];if(console.info("context: "+e.context),"bad-actor"===e.context.request.headers["User-Agent"])(0,e.respond)().withStatusCode(400);else{var a=JSON.stringify({name:(t=Math.floor(Math.random()*o.length),o[t])});(0,e.respond)().withStatusCode(200).withData(a)}}();

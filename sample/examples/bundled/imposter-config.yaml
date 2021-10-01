@@ -1,12 +1,3 @@
 plugin: rest
-
-resources:
-  - path: /
-    method: GET
-    response:
-      scriptFile: bundle.js
-
-  - path: /
-    method: POST
-    response:
-      scriptFile: bundle.js
+response:
+  scriptFile: bundle.js

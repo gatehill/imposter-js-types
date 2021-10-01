@@ -1,6 +1,7 @@
 # Imposter TypeScript types
 
-Code autocompletion for your Imposter JavaScript or TypeScript scripts.
+- Code autocompletion for your [Imposter](https://github.com/outofcoffee/imposter) JavaScript or TypeScript scripts.
+- ES6 and TypeScript support.
 
 ## Getting started
 
@@ -99,8 +100,17 @@ Hit your mock:
     $ curl http://localhost:8080
     { "name": "Ada Lovelace" }
 
-The name is dynamically chosen from a list by the script.
-
 Also notice the log output in Imposter:
 
     DEBUG ... Executed script 'dist/bundle.js' for request: GET http://localhost:8080/ in 6.34ms
+
+### Next steps
+
+Because we use a bundler, you can split your scripts across multiple files.
+
+See the `src` directory of the [sample projects](./samples) for an example.
+
+## Related
+
+- [Imposter Mock Engine](https://github.com/outofcoffee/imposter)
+- [Imposter JS](https://github.com/gatehill/imposter-js)

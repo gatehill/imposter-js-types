@@ -1,18 +1,19 @@
-const {context, logger, respond} = require("@imposter-js/types");
+import {context, logger, respond} from "@imposter-js/types";
+
+console.info(`context: ${context}`);
 
 const request = context.request;
-
-logger.info(`Received ${request.method} request for: ${request.uri}`);
 
 if (request.headers['User-Agent'] === 'bad-actor') {
     respond().withStatusCode(400);
 }
 
+const body = JSON.stringify({
+    "id": 'foo',
+});
+
 if (request.method === 'POST') {
-    respond().withStatusCode(201);
+    respond().withStatusCode(201).withData(body);
 } else {
-    const body = JSON.stringify({
-        "foo": "bar,"
-    });
     respond().withStatusCode(200).withData(body);
 }

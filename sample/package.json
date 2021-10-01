@@ -3,15 +3,21 @@
   "version": "1.0.0",
   "description": "",
   "types": "index.d.ts",
+  "private": true,
   "scripts": {
-    "build": "tsc",
+    "build": "npm run clean && webpack --mode production",
+    "clean": "rimraf ./dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
+  "dependencies": {},
   "devDependencies": {
     "@imposter-js/types": "file:../dist",
-    "@jest/globals": "^27.2.4",
-    "jest": "^27.2.4"
+    "rimraf": "^3.0.2",
+    "ts-loader": "^9.2.6",
+    "typescript": "^4.4.3",
+    "webpack": "^5.55.1",
+    "webpack-cli": "^4.8.0"
   }
 }

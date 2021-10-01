@@ -1,0 +1,1 @@
+!function(){"use strict";var t=__imposter_types;console.info("context: "+t.context);var e=t.context.request;"bad-actor"===e.headers["User-Agent"]&&(0,t.respond)().withStatusCode(400);var o=JSON.stringify({id:"foo"});"POST"===e.method?(0,t.respond)().withStatusCode(201).withData(o):(0,t.respond)().withStatusCode(200).withData(o)}();

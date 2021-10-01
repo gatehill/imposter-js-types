@@ -4,9 +4,9 @@ resources:
   - path: /
     method: GET
     response:
-      scriptFile: bundle.js
+      scriptFile: mock.js
 
   - path: /
     method: POST
     response:
-      scriptFile: bundle.js
+      scriptFile: mock.js

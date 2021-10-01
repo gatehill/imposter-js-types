@@ -5,14 +5,16 @@
 
 ## Getting started
 
+The types are published as an [npm package](https://www.npmjs.com/package/@imposter-js/types).
+
 The fastest way to get started is to clone this repository and copy one of the [sample](./samples) projects:
 
 - JavaScript: [imposter-sample-javascript](./samples/imposter-sample-javascript)
 - TypeScript: [imposter-sample-typescript](./samples/imposter-sample-typescript)
 
-These samples are preconfigured to transpile and bundle source files down to a single JS file. 
+These samples are preconfigured to transpile and bundle source files down to a single JS file. This can be referenced as the `scriptFile` in your Imposter mock config.
 
-> Note: just update the dependency for `@imposter-js/types` in the `package.json` to the latest from npmjs.com
+> Note: just update the dependency for `@imposter-js/types` in the `package.json` to the latest from [npmjs.com](https://www.npmjs.com/package/@imposter-js/types)
 
 In the sample project, bundle your script:
 
@@ -30,7 +32,13 @@ This is a valid Imposter configuration - just run `imposter up`
 
 > Install [Imposter CLI](https://github.com/gatehill/imposter-cli) if you don't already have it.
 
-Hit your mock:
+Start your mock:
+
+    $ imposter up
+    ...
+    Mock server up and running on http://localhost:8080
+
+Hit it:
 
     $ curl http://localhost:8080
     { "name": "Ada Lovelace" }
@@ -66,7 +74,7 @@ Import the types in your Imposter scripts:
 Use the objects to write your script, with code autocompletion in your editor/IDE:
 
 ```js
-console.info(`Received request: ${context.request}`)
+logger.info(`Received request: ${context.request}`)
 
 const request = context.request
 
@@ -95,7 +103,13 @@ This is a valid Imposter configuration - just run `imposter up`
 
 > Install [Imposter CLI](https://github.com/gatehill/imposter-cli) if you don't already have it.
 
-Hit your mock:
+Start your mock:
+
+    $ imposter up
+    ...
+    Mock server up and running on http://localhost:8080
+
+Hit it:
 
     $ curl http://localhost:8080
     { "name": "Ada Lovelace" }

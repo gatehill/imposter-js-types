@@ -25,7 +25,13 @@ This is a valid Imposter configuration - just run `imposter up`
 
 > Install [Imposter CLI](https://github.com/gatehill/imposter-cli) if you don't already have it.
 
-Hit your mock:
+Start your mock:
+
+    $ imposter up
+    ...
+    Mock server up and running on http://localhost:8080
+
+Hit it:
 
     $ curl http://localhost:8080
     { "name": "Ada Lovelace" }

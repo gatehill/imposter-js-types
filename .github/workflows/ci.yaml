@@ -18,8 +18,25 @@ jobs:
       - name: Build core module
         run: npm run build
 
+      - name: Stage dependency for sample projects
+        run: npm run prep-sample
+
+      - name: Install JS sample dependencies
+        working-directory: samples/imposter-sample-javascript
+        run: npm install
+      - name: Build JS sample
+        working-directory: samples/imposter-sample-javascript
+        run: npm run build
+
+      - name: Install TS sample dependencies
+        working-directory: samples/imposter-sample-typescript
+        run: npm install
+      - name: Build TS sample
+        working-directory: samples/imposter-sample-typescript
+        run: npm run build
+
       - name: Release
         if: startsWith(github.ref, 'refs/tags/')
-        run: npm publish --access public
+        run: npm run release
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPMJS_TOKEN }}

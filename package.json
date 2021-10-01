@@ -11,7 +11,7 @@
     "build": "npm run clean && tsc",
     "clean": "rimraf ./dist",
     "release": "npm run build && npm publish --access public",
-    "sample": "npm run build && cp package.json ./dist",
+    "prep-sample": "npm run build && cp package.json ./dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "files": [

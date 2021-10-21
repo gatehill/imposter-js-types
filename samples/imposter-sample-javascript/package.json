@@ -14,7 +14,7 @@
   "devDependencies": {
     "@babel/core": "^7.15.5",
     "@babel/preset-env": "^7.15.6",
-    "@imposter-js/types": "file:../../dist",
+    "@imposter-js/types": "*",
     "babel-loader": "^8.2.2",
     "rimraf": "^3.0.2",
     "webpack": "^5.55.1",

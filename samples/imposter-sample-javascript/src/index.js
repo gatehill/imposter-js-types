@@ -1,4 +1,4 @@
-import {context, logger, respond} from "@imposter-js/types"
+import {context, respond} from "@imposter-js/types"
 import {generateName} from "./names"
 
 console.info(`context: ${context}`)

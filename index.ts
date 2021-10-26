@@ -112,6 +112,21 @@ interface ResponseBehaviour {
      * @param statusCode
      */
     withStatusCode(statusCode: number): ResponseBehaviour
+
+    /**
+     * Delay for an exact period in milliseconds before the response is transmitted to the client.
+     * @param delay
+     */
+    withDelay(delay: number): ResponseBehaviour
+
+    /**
+     * Delay for a period in milliseconds within a given range before the response is transmitted to the client.
+     *
+     * A random value (roughly uniformly distributed) will be selected between the minimum and maximum range values.
+     * @param min
+     * @param max
+     */
+    withDelayRange(min: number, max: number): ResponseBehaviour
 }
 
 interface Store extends Record<string, any> {

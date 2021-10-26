@@ -3,11 +3,15 @@ interface Context {
 }
 
 interface Logger {
-    trace(message:string, cause?: Throwable): void
-    debug(message:string, cause?: Throwable): void
-    info(message:string, cause?: Throwable): void
-    warn(message:string, cause?: Throwable): void
-    error(message:string, cause?: Throwable): void
+    trace(message: string, cause?: Throwable): void
+
+    debug(message: string, cause?: Throwable): void
+
+    info(message: string, cause?: Throwable): void
+
+    warn(message: string, cause?: Throwable): void
+
+    error(message: string, cause?: Throwable): void
 }
 
 interface Request {
@@ -19,7 +23,7 @@ interface Request {
     /**
      * A map containing the request headers.
      */
-    headers : Record<string, string>
+    headers: Record<string, string>
 
     /**
      * The HTTP method of the request.
@@ -29,17 +33,17 @@ interface Request {
     /**
      * A map containing the request headers with all keys in lowercase.
      */
-    normalisedHeaders : Record<string, string>
+    normalisedHeaders: Record<string, string>
 
     /**
      * A map containing the request path parameters.
      */
-    pathParams : Record<string, string>
+    pathParams: Record<string, string>
 
     /**
      * A map containing the request query parameters.
      */
-    queryParams : Record<string, string>
+    queryParams: Record<string, string>
 
     /**
      * The path of the request.
@@ -110,12 +114,49 @@ interface ResponseBehaviour {
     withStatusCode(statusCode: number): ResponseBehaviour
 }
 
+interface Store extends Record<string, any> {
+    /**
+     * Delete an item.
+     * @param key
+     */
+    delete(key: string): void
+
+    /**
+     * Check for the presence of an item by key.
+     * @param key
+     */
+    hasItemWithKey(key: string): boolean
+
+    /**
+     * Load an item.
+     * @param key
+     */
+    load<T>(key: string): T
+
+    /**
+     * Load all items.
+     */
+    loadAll<T>(): Record<string, any>[]
+
+    /**
+     * Save an item.
+     * @param key
+     * @param value
+     */
+    save(key: string, value: any): void
+}
+
+interface Stores {
+    open(storeName: string): Store
+}
+
 interface Throwable {
 }
 
-let context : Context;
-let env : Record<string, string>
-let logger : Logger;
-let respond : () => ResponseBehaviour;
+let context: Context;
+let env: Record<string, string>
+let logger: Logger;
+let respond: () => ResponseBehaviour;
+let stores: Stores;
 
-export {context, env, logger, respond};
+export {context, env, logger, respond, stores};

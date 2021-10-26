@@ -1,5 +1,6 @@
 import {context, respond} from "@imposter-js/types"
 import {generateName} from "./names"
+import {incrementCounter} from "./counter"
 
 console.info(`context: ${context}`)
 
@@ -13,7 +14,10 @@ if (request.headers['User-Agent'] === 'bad-actor') {
         "name": generateName(),
     })
 
+    const counter = incrementCounter()
+
     respond()
         .withStatusCode(200)
+        .withHeader('X-Counter', counter.toString())
         .withData(body)
 }

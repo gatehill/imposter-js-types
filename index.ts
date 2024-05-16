@@ -127,6 +127,13 @@ interface ResponseBehaviour {
      * @param max
      */
     withDelayRange(min: number, max: number): ResponseBehaviour
+
+    /**
+     * Return raw response data
+     * 
+     * @param content
+     */
+    withContent(content: string | undefined): ResponseBehaviour
 }
 
 interface Store extends Record<string, any> {
@@ -152,6 +159,12 @@ interface Store extends Record<string, any> {
      * Load all items.
      */
     loadAll<T>(): Record<string, any>[]
+
+    /**
+     * Read a store item as JSON
+     * @param name
+     */
+    loadAsJson(name: string): string
 
     /**
      * Save an item.

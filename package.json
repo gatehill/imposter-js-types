@@ -4,7 +4,7 @@
   "description": "TypeScript types for Imposter scripts.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatehill/imposter-js-types.git"
+    "url": "https://github.com/imposter-project/imposter-js-types.git"
   },
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",

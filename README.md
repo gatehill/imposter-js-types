@@ -127,4 +127,4 @@ See the `src` directory of the [sample projects](./samples) for an example.
 ## Related
 
 - [Imposter Mock Engine](https://github.com/outofcoffee/imposter)
-- [Imposter JS](https://github.com/gatehill/imposter-js)
+- [Imposter JS](https://github.com/imposter-project/imposter-js)
